@@ -5,7 +5,7 @@
     "XOJIOD <Holodniak.e@gmail.com>"
   ],
   "dependencies": {
-    "jquery": "~2.1.4",
+    "jquery": "~2.2.3",
     "matchHeight": "~0.6.0"
   },
   "devDependencies": {

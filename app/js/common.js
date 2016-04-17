@@ -67,7 +67,7 @@ $(document).ready(function() {
        }
        else
        {
-         $('#form').find('input.error').first().focus();
+         $('form').find('input.error').first().focus();
        }
      return output;
   };

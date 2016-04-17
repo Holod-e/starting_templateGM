@@ -1,6 +1,5 @@
 # Starting_template
 Starting template is a front-end HTML5 template for Genius Marketing developers.
-Featuring the latest technologies and impeccable code this download is the ideal starting point for any web project.
 
 ##Gulp - Start Guide
 <p>Need to ensure you have everything on your machine (Node.js, npm, bower)</p>
@@ -10,6 +9,7 @@ Featuring the latest technologies and impeccable code this download is the ideal
 	<li>bower i</li>
 	<li>gulp (Run project)</li>
 	<li>gulp build (Build project)</li>
+	<li>gulp sprite (make spite from all png files in app/img/sprite)</li>
 </ul>
 
 ##SASS Partials
