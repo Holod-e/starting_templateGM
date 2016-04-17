@@ -5,7 +5,9 @@
     "XOJIOD <Holodniak.e@gmail.com>"
   ],
   "dependencies": {
-    "matchHeight": "~0.6.0"
+    "matchHeight": "~0.6.0",
+    "jquery": "~2.1.4",
+    "bPopup": "bpopup#~0.11.0"
   },
   "devDependencies": {
     "animate.css": "^3.5.1",

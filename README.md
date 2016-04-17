@@ -1,5 +1,5 @@
-# Starting_template
-Starting template is a front-end HTML5 template for Genius Marketing developers.
+# Starting_templateGM
+Starting templateGM is a front-end HTML5 template for Genius Marketing developers.
 
 ##Gulp - Start Guide
 <p>Need to ensure you have everything on your machine (Node.js, npm, bower)</p>
