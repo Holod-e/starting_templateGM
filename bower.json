@@ -1,0 +1,15 @@
+{
+  "name": "work_shablon",
+  "version": "1.0.0",
+  "authors": [
+    "XOJIOD <Holodniak.e@gmail.com>"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "matchHeight": "~0.6.0"
+  },
+  "devDependencies": {
+    "animate.css": "^3.5.1",
+    "wow": "wowjs#^1.1.2"
+  }
+}

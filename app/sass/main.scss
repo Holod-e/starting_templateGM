@@ -1,0 +1,77 @@
+
+/*********************************************\
+		@IMPORT VALIDATOR-STYLE
+\*********************************************/
+@import "_validator.scss";
+
+/*********************************************\
+		@IMPORT VARIABLES
+\*********************************************/
+@import "_variables.scss";
+
+/*********************************************\
+		@IMPORT BUTTONS
+\*********************************************/
+@import "_buttons.scss";
+
+/*********************************************\
+		MAIN STYLE
+\*********************************************/
+body {
+	font-family: "HelveticaNeueCyr-Roman", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+	min-width: 320px;
+	color: #333333;
+	position: relative;
+	background-color: #ffffff;
+}
+
+.hidden {
+	display: none;
+}
+
+.carousel img {
+	width: 100%;
+	height: auto;
+}
+
+.wrapper {
+	margin: 0 auto;
+}
+
+.modal-body {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	width: 100%;
+	max-width:720px;
+	margin-left: -360px;
+	font: 16px/21px 'HelveticaNeueCyr-Roman';
+	background-color: #fff;
+	padding: 15px;
+	box-shadow: 0 0 25px 5px #999;
+	border-radius: 10px;
+}
+
+/*********************************************\
+		@IMPORT HEADER
+\*********************************************/
+@import "_header.scss";
+
+/*********************************************\
+		TYPOGRAPHY
+\*********************************************/
+
+/*********************************************\
+		SECTIONS
+\*********************************************/
+
+/*********************************************\
+		@IMPORT FOOTER
+\*********************************************/
+@import "_footer.scss";
+
+/*********************************************\
+		@IMPORT MEDIA
+\*********************************************/
+@import "_media.scss";
