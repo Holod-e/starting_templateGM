@@ -1,11 +1,11 @@
 {
-  "name": "start_html",
+  "name": "starting_templateGM",
   "version": "1.0.1",
-  "description": "",
+  "description": "Starting template for Genius Marketing front-end developers",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Evhenii Holodniak",
   "devDependencies": {
     "browser-sync": "^2.10.0",
     "gulp": "^3.9.0",
