@@ -10,6 +10,8 @@ var gulp = require("gulp"),																// gulp core
 		clean = require('gulp-clean'),												// removing files and folders
 		gutil = require('gulp-util'),													// utilete for uglify js
 		rename = require("gulp-rename"),											// rename files
+		plumber = require("gulp-plumber"),											// error reporter
+		notify = require("gulp-notify"),											// error reporternotify
 		useref = require('gulp-useref'),											// parse build blocks in HTML files to replace references
 		uglify = require('gulp-uglify'),											// uglifies the js
 		bourbon = require('node-bourbon'),										// bourbon libruary
@@ -63,7 +65,11 @@ gulp.task('html', function () {
 
 gulp.task('scss', function () {
 	gulp.src('./app/sass/*.scss')														// get the files
-		.pipe(sass({includePaths: require('node-bourbon').includePaths}).on('error', sass.logError))
+		.pipe(plumber({errorHandler: notify.onError({
+  		 title:    'Ошибка :(',
+  		 message:  '<%= error.message %>'
+			})}))
+		.pipe(sass({includePaths: require('node-bourbon').includePaths}))
 		.pipe(autoprefixer({browsers: ['last 3 versions'], cascade: false}))
 		.pipe(gulp.dest('app/css'))														// where to put the file
 		.pipe(browserSync.stream());													// browsersync stream
@@ -180,15 +186,3 @@ gulp.task('default', ['connect', 'watch']);
 /*******************************************************************************\
 		13.	DEBUGING FUNCTION
 \*******************************************************************************/
-
-var log = function(error) {
-	console.log([
-		'',
-		"-----------ERROR MESSAGE START----------",
-		("[" + error.name + " in " + error.plugin + "]"),
-		error.message,
-		"-----------ERROR MESSAGE END----------",
-		''
-	].join('\n'));
-	this.end();
-}
