@@ -1,6 +1,6 @@
 {
   "name": "starting_templateGM",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "description": "Starting template for Genius Marketing front-end developers",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

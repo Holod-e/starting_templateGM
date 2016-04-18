@@ -98,7 +98,7 @@ gulp.task('sprite', function () {
   return spriteData.pipe(gulp.dest('./app/img/'));
 });
 
-// Compress Task
+// Compress img Task
 gulp.task('compress', function() {
   return gulp.src('./app/img/**/*')
   .pipe(imagemin())
@@ -106,12 +106,14 @@ gulp.task('compress', function() {
   .pipe(gulp.dest('dist/img'))
 });
 
+// optimisation png images Task
 gulp.task('pngquant', function() {
 	return gulp.src('./app/img/**/*.png')
 	.pipe(imageminPngquant({quality: '75-80', speed: 4})())
 	.pipe(gulp.dest('./app/img'))													// where to put the file
 	});
 
+// all img task
 gulp.task('images', function () {
 	return gulp.src('./app/img/**/*')												// get the files
 		.pipe(imagemin()) 																			// optimisation files
@@ -119,8 +121,6 @@ gulp.task('images', function () {
 		.pipe(imageminJpegRecompress({loops: 3})())
 		.pipe(gulp.dest('dist/img'))													// where to put the file
 });
-
-
 
 /*******************************************************************************\
 		8.	FONTS TASKS
