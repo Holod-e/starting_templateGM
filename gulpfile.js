@@ -167,12 +167,9 @@ gulp.task('build', ['clean'], function () {
 	gulp.start('fonts');																		// fonts task
 	gulp.start('libs');																			// libs task
 	gulp.start('extrass');
-	var assets = useref.assets();
 		return gulp.src('app/*.html')
-			.pipe(assets)
 			.pipe(gulpif('*.js', uglify().on('error', gutil.log)))
 			.pipe(gulpif('*.css', minifyCss({compatibility: 'ie8'})))
-			.pipe(assets.restore())
 			.pipe(useref())
 			.pipe(gulp.dest('./dist'));
 });
