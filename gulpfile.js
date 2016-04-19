@@ -17,7 +17,7 @@ var gulp = require("gulp"),																// gulp core
 		bourbon = require('node-bourbon'),										// bourbon libruary
 		imagemin = require('gulp-imagemin'),									// img optimisation
 		wiredep = require('wiredep').stream,									// bower dependencies to your source code
-		minifyCss = require('gulp-minify-css'),								// minify the css files
+		cleanCSS = require('gulp-clean-css'),									// minify the css files
 		spritesmith = require('gulp.spritesmith'),						// spretes generator
 		autoprefixer = require('gulp-autoprefixer'),					// sets missing browserprefixes
 		browserSync = require('browser-sync').create(),				// inject code to all devices
@@ -169,7 +169,7 @@ gulp.task('build', ['clean'], function () {
 	gulp.start('extrass');
 		return gulp.src('app/*.html')
 			.pipe(gulpif('*.js', uglify().on('error', gutil.log)))
-			.pipe(gulpif('*.css', minifyCss({compatibility: 'ie8'})))
+			.pipe(gulpif('*.css', cleanCSS({compatibility: 'ie8'})))
 			.pipe(useref())
 			.pipe(gulp.dest('./dist'));
 });
