@@ -11,7 +11,9 @@ Starting templateGM is a front-end HTML5 template for Genius Marketing developer
 	<li>gulp build (Build project)</li>
 	<li>gulp sprite (make spite from all png files in app/img/sprite)</li>
 </ul>
-
+<p>You can use all tasks when you want. Only write command $ gulp + taskname in console.</p>
+<p>Example: $ gulp compress = compress all img in app/img</p>
+<p>Example: $ gulp pnquant = compress all png in app/img</p>
 ##SASS Partials
 <p>The partials directory is where most of the CSS is constructed. Plan ahead and think how to structure these.</p>
 <ul>
@@ -20,7 +22,6 @@ Starting templateGM is a front-end HTML5 template for Genius Marketing developer
 	<li>_buttons.scss - Button styles</li>
 	<li>_variables.scss - Colours, Typography</li>
 	<li>_media.scss - Media queries</li>
-	<li>_validator - styles for validatorGM.js</li>
 </ul>
 
 ##Structuring your projects

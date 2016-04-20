@@ -7,17 +7,17 @@
 var gulp = require("gulp"),																// gulp core
 		sass = require('gulp-sass'),													// sass compiler
 		gulpif = require('gulp-if'),													// conditionally run a task
-		clean = require('gulp-clean'),												// removing files and folders
+		csso = require('gulp-csso'),													// css optimization
 		gutil = require('gulp-util'),													// utilete for uglify js
+		clean = require('gulp-clean'),												// removing files and folders
 		rename = require("gulp-rename"),											// rename files
-		plumber = require("gulp-plumber"),											// error reporter
 		notify = require("gulp-notify"),											// error reporternotify
 		useref = require('gulp-useref'),											// parse build blocks in HTML files to replace references
 		uglify = require('gulp-uglify'),											// uglifies the js
 		bourbon = require('node-bourbon'),										// bourbon libruary
+		plumber = require("gulp-plumber"),										// error reporter
 		imagemin = require('gulp-imagemin'),									// img optimisation
 		wiredep = require('wiredep').stream,									// bower dependencies to your source code
-		csso = require('gulp-csso'),													// css optimization
 		spritesmith = require('gulp.spritesmith'),						// spretes generator
 		autoprefixer = require('gulp-autoprefixer'),					// sets missing browserprefixes
 		browserSync = require('browser-sync').create(),				// inject code to all devices
@@ -66,8 +66,8 @@ gulp.task('html', function () {
 gulp.task('scss', function () {
 	gulp.src('./app/sass/*.scss')														// get the files
 		.pipe(plumber({errorHandler: notify.onError({
-  		 title:    'Ошибка :(',
-  		 message:  '<%= error.message %>'
+			 title:    'Ошибка :(',
+			 message:  '<%= error.message %>'
 			})}))
 		.pipe(sass({includePaths: require('node-bourbon').includePaths}))
 		.pipe(autoprefixer({browsers: ['last 3 versions'], cascade: false}))
@@ -88,7 +88,7 @@ gulp.task('js', function() {
 		7.	IMAGES TASKS
 \*******************************************************************************/
 
-//spreite task 
+//sprite task 
 gulp.task('sprite', function () {
   var spriteData = gulp.src('./app/img/sprite/*.png').pipe(spritesmith({
     imgName: 'sprite.png',
@@ -98,7 +98,7 @@ gulp.task('sprite', function () {
   return spriteData.pipe(gulp.dest('./app/img/'));
 });
 
-// Compress img Task
+// Compress Task
 gulp.task('compress', function() {
   return gulp.src('./app/img/**/*')
   .pipe(imagemin())
@@ -148,7 +148,7 @@ gulp.task('extrass', function () {
 	return gulp.src([																				// get the files
 		'app/*.*',
 		'!app/*.html'																					// exept '.html'
-	]).pipe(gulp.dest('dist'))															// where to put the file														
+	]).pipe(gulp.dest('dist'))															// where to put the file
 });
 
 /*******************************************************************************\
