@@ -1,45 +1,26 @@
 
-
-/**
- * 1. Change the default font family in all browsers (opinionated).
- * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
- */
-
 html {
   font-family: sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
-/**
- * Remove the margin in all browsers (opinionated).
- */
-
 body {
   margin: 0;
 }
 
-/* HTML5 display definitions
-   ========================================================================== */
-
-/**
- * Add the correct display in IE 9-.
- * 1. Add the correct display in Edge, IE, and Firefox.
- * 2. Add the correct display in IE.
- */
-
 article,
 aside,
-details, /* 1 */
+details, 
 figcaption,
 figure,
 footer,
 header,
-main, /* 2 */
+main, 
 menu,
 nav,
 section,
-summary { /* 1 */
+summary { 
   display: block;
 }
 
@@ -524,7 +505,7 @@ hr {
   .container {
     width: 320px;
   }
-  
+}
 @media (min-width: 720px) {
   .container {
     width: 720px;
