@@ -157,5 +157,30 @@ $(document).ready(function() {
           $("#pop_email").val(getCookie("email"));
           $("#pop_phone").val(getCookie("last1"));
       });
-
 });
+
+ // Smooth Scrool setting
+  SmoothScroll({
+    // Scrolling Core
+    animationTime    : 1400, // [ms]
+    stepSize         : 50, // [px]
+
+    // Acceleration
+    accelerationDelta : 200,  // 50
+    accelerationMax   : 20,   // 3
+
+    // Keyboard Settings
+    keyboardSupport   : true,  // option
+    arrowScroll       : 250,    // [px]
+
+    // Pulse (less tweakable)
+    // ratio of "tail" to "acceleration"
+    pulseAlgorithm   : true,
+    pulseScale       : 4,
+    pulseNormalize   : 1,
+
+    // Other
+    touchpadSupport   : false, // ignore touchpad by default
+    fixedBackground   : true, 
+    excluded          : ''    
+  })

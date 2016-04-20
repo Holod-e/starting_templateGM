@@ -28,7 +28,7 @@ Starting templateGM is a front-end HTML5 template for Genius Marketing developer
 <p>This is a developer preference. There is no official way. Do you want all your pages in partials? Would you rather just add main components and still use style.scss for the bulk of the CSS? Do what's best for you and your project.</p>
 
 ##About bootstrapGM.css
-<p>bootstrapGM.css is a normalize.css and castomized grid system for prject. Properties of this grid system:</p>
+<p>bootstrapGM.css is a normalize.css and castomized grid system for project. Properties of this grid system:</p>
 <ul>
 	<li>Breakpoints: 960px, 720px</li>
 	<li>Use col-xs for mobile grid (320px - 720px)</li>
@@ -36,9 +36,9 @@ Starting templateGM is a front-end HTML5 template for Genius Marketing developer
 	<li>Use col-md for desktop grid ( > 960px )</li>
 	<li>container sizes :
 		<ul>
-			<li>.contaier {width: 320px} for mobile grid</li>
-			<li>.contaier {width: 720px} for tablet grid</li>
-			<li>.contaier {width: 960px} for desktop grid</li>
+			<li>.container {width: 320px} for mobile grid</li>
+			<li>.container {width: 720px} for tablet grid</li>
+			<li>.container {width: 960px} for desktop grid</li>
 		</ul>
 	</li>
 </ul>
