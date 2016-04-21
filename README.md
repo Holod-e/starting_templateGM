@@ -33,12 +33,14 @@ Starting templateGM is a front-end HTML5 template for Genius Marketing developer
 	<li>Breakpoints: 960px, 720px</li>
 	<li>Use col-xs for mobile grid (320px - 720px)</li>
 	<li>Use col-sm for tablet grid (720px - 960px)</li>
-	<li>Use col-md for desktop grid ( > 960px )</li>
+	<li>Use col-md for notebook grid (960px - 1130px )</li>
+	<li>Use col-lg for desktop grid ( > 1130px )</li>
 	<li>container sizes :
 		<ul>
 			<li>.container {width: 320px} for mobile grid</li>
 			<li>.container {width: 720px} for tablet grid</li>
-			<li>.container {width: 960px} for desktop grid</li>
+			<li>.container {width: 960px} for notebook grid</li>
+			<li>.container {width: 1130px} for desktop grid</li>
 		</ul>
 	</li>
 </ul>

@@ -9,6 +9,7 @@ var gulp = require("gulp"),																// gulp core
 		gulpif = require('gulp-if'),													// conditionally run a task
 		csso = require('gulp-csso'),													// css optimization
 		gutil = require('gulp-util'),													// utilete for uglify js
+		uncss = require('gulp-uncss'),												// remove all unussed styles
 		clean = require('gulp-clean'),												// removing files and folders
 		rename = require("gulp-rename"),											// rename files
 		notify = require("gulp-notify"),											// error reporternotify
@@ -170,6 +171,9 @@ gulp.task('build', ['clean'], function () {
 		return gulp.src('app/*.html')
 			.pipe(useref())
 			.pipe(gulpif('*.js', uglify().on('error', gutil.log)))
+			.pipe(gulpif('*.css',uncss({
+            html: ['./app/index.html']
+        })))
 			.pipe(gulpif('*.css', csso()))
 			.pipe(gulp.dest('./dist'));
 });

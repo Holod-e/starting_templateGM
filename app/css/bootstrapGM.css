@@ -516,6 +516,11 @@ hr {
     width: 960px;
   }
 }
+@media (min-width: 1130px) {
+  .container {
+    width: 1130px;
+  }
+}
 
 .container-fluid {
   margin-right: auto;
@@ -1005,7 +1010,7 @@ hr {
     margin-left: 0%;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1130px) {
   .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
     float: left;
   }
