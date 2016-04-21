@@ -1,0 +1,57 @@
+<snippet>
+	<content><![CDATA[
+<!-- social inons -->
+#soc {
+  margin-top: 0;
+  margin-left: 0;
+  width: 440px;
+  height: 40px;
+  border-radius: 3px;
+  /*border: 1px #dadada solid;*/
+  background-color: transparent;
+  /*background-color: #eeeeee;*/
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  /*float: left;*/
+}
+
+#soc1 {
+  width: 205px;
+  height: 100%;
+  float: left;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  line-height: 42px;
+  padding-left: 0;
+  margin-left: -25px;
+}
+
+#soc2 {
+  width: 130px;
+  height: 100%;
+  float: left;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  line-height: 28px;
+}
+
+#soc3 {
+  width: 105px;
+  height: 100%;
+  float: right;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  line-height: 46px;
+  text-align: center;
+  margin-right: 7px;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>soccss</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+@include font-face("${1:font-name}", "../fonts/${1:font-name}/${1:font-name}", \$file-formats: eot woff ttf);
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>iff</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.sass</scope>
+</snippet>
