@@ -49,15 +49,14 @@ Starting templateGM is a front-end HTML5 template for Genius Marketing developer
 <p>With this library you can easy and very fast make modals window or popups</p>
 <p>Just make link (a with href="modalID" and class="modal-link". Example:</p>
 <pre>
-	<code><a href="#modal1" class="modal-link"> Modal1 </a></code>
+	<code>
+	a href="#modal1" class="modal-link" 
+	</code>
 </pre>
 <p>Make body of popup:</p>
 <pre>
 	<code>
-		<div class="modal-body" id="modal1">
-			<span class="button b-close"><span>x</span></span>
-			<p>Modal Body</p>
-		</div>
+ div class="modal-body" id="modal1"
 	</code>
 </pre>
 <p>You can change properties of modal window and animation in common.js</p>
