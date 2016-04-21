@@ -6,7 +6,6 @@
   ],
   "dependencies": {
     "jquery": "~2.1.4",
-    "matchHeight": "~0.6.0",
     "bPopup": "bpopup#~0.11.0",
     "wow": "wowjs#^1.1.2",
     "smoothscroll-for-websites": "^1.4.4"

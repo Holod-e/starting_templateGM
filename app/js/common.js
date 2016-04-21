@@ -1,8 +1,5 @@
 $(document).ready(function() {
 	//Check
-	//jquery.matchHeight.js
-	//Docs: https://github.com/liabru/jquery-match-height
-	$('element').matchHeight();
 
 	//BPopUp windows
 	//Docs: http://dinbror.dk/bpopup/
