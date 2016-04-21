@@ -45,4 +45,36 @@ Starting templateGM is a front-end HTML5 template for Genius Marketing developer
 	</li>
 </ul>
 
+##About bPopup.js
+<p>With this library you can easy and very fast make modals window or popups</p>
+<p>Just make link (a with href="modalID" and class="modal-link". Example:</p>
+<pre>
+	<code><a href="#modal1" class="modal-link"> Modal1 </a></code>
+</pre>
+<p>Make body of popup:</p>
+<pre>
+	<code>
+		<div class="modal-body" id="modal1">
+			<span class="button b-close"><span>x</span></span>
+			<p>Modal Body</p>
+		</div>
+	</code>
+</pre>
+<p>You can change properties of modal window and animation in common.js</p>
+<pre>
+	<code>
+  $('a.modal-link').on('click', function(e) {
+    e.preventDefault();
+    var id = $(this).attr('href');
+    $(id).bPopup({
+      follow: [false, false], //x, y
+      position: ['50%', '10%'], //x, y
+      // speed: 450
+      // transition: 'slideIn',
+      // transitionClose: 'slideBack'
+    });
+  })
+	</code>
+</pre>
+
 
