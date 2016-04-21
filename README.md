@@ -75,5 +75,6 @@ Starting templateGM is a front-end HTML5 template for Genius Marketing developer
   })
 	</code>
 </pre>
+<p>More details and properties: http://dinbror.dk/bpopup/</p>
 
 
