@@ -171,7 +171,7 @@ gulp.task('build', ['clean'], function () {
 		return gulp.src('app/*.html')
 			.pipe(useref())
 			.pipe(gulpif('*.js', uglify().on('error', gutil.log)))
-			.pipe(gulpif('*.css',uncss({
+			.pipe(gulpif('main.css',uncss({
             html: ['./app/index.html']
         })))
 			.pipe(gulpif('*.css', csso()))
