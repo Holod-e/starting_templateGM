@@ -28,47 +28,7 @@ $(document).ready(function() {
     wow.init();
   }
 
-    // валидация и отправка данных с формы в CRM
-    function validate(name, email, phone){
-        var output = false;
-         $('#name').focus();
-         $('#email').focus();
-         $('#phone1').focus();
-         $('#phone2').focus();
-         $('#phone3').focus();
-         $('.subm1').focus();
-        // После того, как мы нажали кнопку "Отправить", делаем проверку,
-        // если кол-во полей с классов .not_error равно 5(так как у нас всего 5 полей), то есть все поля заполнены верно,
-        if($('.not_error').length == 5)
-        {  
-           // после успешной проверки отправляем форму и ставим куки
-             $.ajax({
-               type: "POST",
-               url: 'crm/export.php',
-               async: false,
-               data: {
-                 name: name,
-                 email: email,
-                 phone: phone
-               },
-               success: function () {
-                 setCookie('name', $('#name').val(), 365);
-                 setCookie('email', $('#email').val(), 365);
-                 setCookie('last1', $('#last1').val(), 365);
-                 setCookie('phone1', $('#phone1').val(), 365);
-                 setCookie('phone2', $('#phone2').val(), 365);
-                 setCookie('phone3', $('#phone3').val(), 365);
-                 output = true;
-               }
-             });
-       }
-       else
-       {
-         $('form').find('input.error').first().focus();
-       }
-     return output;
-  };
-
+   
 
 
 	// 3 phones to 1 (last1) script
@@ -181,3 +141,45 @@ $(document).ready(function() {
     fixedBackground   : true, 
     excluded          : ''    
   })
+
+   // валидация и отправка данных с формы в CRM
+    function validate(name, email, phone){
+        var output = false;
+         form = $('#formID'); // указать ID формы !
+         form.find('input.name').focus();
+         form.find('input.email').focus();
+         form.find('input.phone1').focus();
+         form.find('input.phone2').focus();
+         form.find('input.phone3').focus();
+         form.find('.subm1').focus();
+        // После того, как мы нажали кнопку "Отправить", делаем проверку,
+        // если кол-во полей с классов .not_error равно 5(так как у нас всего 5 полей), то есть все поля заполнены верно,
+        if($('.not_error').length == 5)
+        {  
+           // после успешной проверки отправляем форму и ставим куки
+             $.ajax({
+               type: "POST",
+               url: 'crm/export.php',
+               async: false,
+               data: {
+                 name: name,
+                 email: email,
+                 phone: phone
+               },
+               success: function () {
+                 setCookie('name', $('.name').val(), 365);
+                 setCookie('email', $('.email').val(), 365);
+                 setCookie('last1', $('.last1').val(), 365);
+                 setCookie('phone1', $('.phone1').val(), 365);
+                 setCookie('phone2', $('.phone2').val(), 365);
+                 setCookie('phone3', $('.phone3').val(), 365);
+                 output = true;
+               }
+             });
+       }
+       else
+       {
+         form.find('input.error').first().focus();
+       }
+     return output;
+  };

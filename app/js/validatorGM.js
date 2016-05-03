@@ -2,10 +2,10 @@
       $(document).ready(function(){
 
         function validateForm(){
-          var id = $(this).attr('id');
+          var id = $(this).attr('name');
           var val = $(this).val();
 
-           switch(id)
+           switch(inputName)
            {
 
                  // Проверка поля "Имя"
@@ -82,8 +82,8 @@
            } // end switch(...)
         }
          // Устанавливаем обработчик потери фокуса для всех полей ввода текста
-           $('input#name, input#email, input#phone1, input#phone2, input#phone3').unbind().blur(validateForm); // end blur()
-           $('input#name, input#email, input#phone1, input#phone2, input#phone3').keypress(validateForm); // end blur()
+           $('input.name, input.email, input.phone1, input.phone2, input.phone3').unbind().blur(validateForm); // end blur()
+           $('input.name, input.email, input.phone1, input.phone2, input.phone3').keypress(validateForm); // end blur()
           
         
       // Теперь отправим наше письмо
