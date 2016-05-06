@@ -2,7 +2,7 @@
       $(document).ready(function(){
 
         function validateForm(){
-          var id = $(this).attr('name');
+          var inputName = $(this).attr('name');
           var val = $(this).val();
 
            switch(inputName)
