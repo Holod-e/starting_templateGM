@@ -38,22 +38,21 @@ body {
 	margin: 0 auto;
 }
 
-// .modal-body {
-// 	margin-top: 30px;
-// 	margin-bottom: 30px;
-// 	width: 100%;
-// 	max-width:720px;
-// 	margin-left: -360px;
-// 	font: 16px/21px 'HelveticaNeueCyr-Roman';
-// 	background-color: #fff;
-// 	padding: 15px;
-// 	box-shadow: 0 0 25px 5px #999;
-// 	border-radius: 10px;
-// }
+p {
+	margin: 0;
+	padding: 0;
+}
+
+br.sm {display: none;}
+br.xs {display: none;}
 
 //validatorGM styles//
- form input.error {border: 2px solid red !important;}
- form input.not_error {border: 2px solid green !important;}
+ form input.error {
+ 	box-shadow: inset 0px 0px 20px 1px rgba(255,0,0,0.3);
+ 	border: 2px solid red !important;}
+ form input.not_error {
+ 	box-shadow: inset 0px 0px 20px 1px rgba(100,255,100,0.3);
+ 	border: 2px solid #99FF99 !important;}
 
 /*********************************************\
 		@IMPORT HEADER

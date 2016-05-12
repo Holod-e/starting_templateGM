@@ -7,6 +7,12 @@
 	right: 0;
 	top: 0;
 	opacity: 0.9;
+	cursor: pointer;
+	transition:all 0.3s linear;
+}
+.close:hover {
+	color: #fff;
+	background-color: #000;
 }
 
 .button {

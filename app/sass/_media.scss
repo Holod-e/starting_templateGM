@@ -9,17 +9,22 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 960px) {	
+ .container {width: 720px;}
+ br.sm {display: block;}
+ br.xs {display: none;}
 
 }
 
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 720px) {
-	.modal-body {
-		left: 0 !important;
-		margin: 30px auto;
+	.container {
+		width: 340px;
+		overflow: hidden;
 	}
-	
+	br.sm {display: none;}
+	br.xs {display: block;}
+
 	/*Disable Animation on Mobile Devices*/
 	.animated {
 		/*CSS transitions*/
@@ -45,8 +50,11 @@
 
 
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 320px) {
-	
+@media only screen and (max-width : 340px) {
+		.container {
+		padding: 0;
+		overflow: hidden;
+		width: 320px;}
 }
 
 

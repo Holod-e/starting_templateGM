@@ -1,22 +1,6 @@
 $(document).ready(function() {
 	//Check
 
-	//BPopUp windows
-	//Docs: http://dinbror.dk/bpopup/
-  $('a.modal-link').on('click', function(e) {
-    e.preventDefault();
-    var id = $(this).attr('href');
-    $(id).bPopup({
-      follow: [false, false], //x, y
-      position: ['50%', '10%'], //x, y
-      // speed: 450
-      // transition: 'slideIn',
-      // transitionClose: 'slideBack'
-    });
-  })
-	
-
-
  // инициализируем wow.js
   if ($(window).width() > 1000) {
     wow = new WOW(
@@ -115,32 +99,6 @@ $(document).ready(function() {
           $("#pop_phone").val(getCookie("last1"));
       });
 });
-
- // Smooth Scrool setting
-  SmoothScroll({
-    // Scrolling Core
-    animationTime    : 1400, // [ms]
-    stepSize         : 50, // [px]
-
-    // Acceleration
-    accelerationDelta : 200,  // 50
-    accelerationMax   : 20,   // 3
-
-    // Keyboard Settings
-    keyboardSupport   : true,  // option
-    arrowScroll       : 250,    // [px]
-
-    // Pulse (less tweakable)
-    // ratio of "tail" to "acceleration"
-    pulseAlgorithm   : true,
-    pulseScale       : 4,
-    pulseNormalize   : 1,
-
-    // Other
-    touchpadSupport   : false, // ignore touchpad by default
-    fixedBackground   : true, 
-    excluded          : ''    
-  })
 
    // валидация и отправка данных с формы в CRM
     function validate(name, email, phone){
