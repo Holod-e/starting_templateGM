@@ -155,6 +155,16 @@ gulp.task('extrass', function () {
 /*******************************************************************************\
 		11.	BUILD TASKS
 \*******************************************************************************/
+//nomincss
+gulp.task('nomincss', function() {
+	return gulp.src('./app/css/*.*')
+		.pipe(gulp.dest('dist/nomin/css'))
+	});
+gulp.task('nominjs', function() {
+	return gulp.src('./app/js/*.*')
+		.pipe(gulp.dest('dist/nomin/js'))
+	});
+
 
 // Clean
 gulp.task('clean', function () {
@@ -167,6 +177,8 @@ gulp.task('build', ['clean'], function () {
 	gulp.start('images');																		// images task
 	gulp.start('fonts');																		// fonts task
 	gulp.start('libs');																			// libs task
+	gulp.start('nomincss');																	// copy nomin css task
+	gulp.start('nominjs');																	// copy nomin js task
 	gulp.start('extrass');
 		return gulp.src('app/*.html')
 			.pipe(useref())
@@ -176,6 +188,7 @@ gulp.task('build', ['clean'], function () {
         })))
 			.pipe(gulpif('*.css', csso()))
 			.pipe(gulp.dest('./dist'));
+
 });
 
 /*******************************************************************************\
