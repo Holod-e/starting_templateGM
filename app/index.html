@@ -52,7 +52,8 @@
 <footer >
 	<div class="container">
 			<div class="copy-wrap">
-				<p class="copy">© Олесь Тимофеев &amp; Genius Marketing. Все права защищены. <br> Любое копирование материалов разрешено только с согласия правообладателей.</p>
+				<p class="copy">ТОВ "МАРКЕТИНГ КОНСАЛТИНГ", ЄДРПОУ: 40300106, Адреса: 03067, м. Київ, вул. Гарматна, 4	<br class="md">
+	  HILLSIDE TRADE LP, Registration No.: SL023989, Address: 44/46 MORNINGSIDE ROAD SUITE 3 EDINBURGH SCOTLAND </p><br>
 			</div>
 			<div class="contacts-wrap">
 			<p class="contacts">По всем вопросам обращайтесь:<a class="mail" href="mailto:info@geniusmarketing.me">info@geniusmarketing.me</a> <br> +7 495 241 07 87 (Россия), +38 093 170 02 66, +38 050 388 76 20 (Украина) </p>
@@ -287,7 +288,6 @@
 	<script src="bower/jquery/dist/jquery.js"></script>
 	<script src="bower/wow/dist/wow.js"></script>
 	<!-- endbower -->
-	<script src="js/jquery.plugins.js"></script>
 	<script src="js/modal.min.js"></script>
 	<script src="js/AnchorScroller.js"></script>
 	<script src="js/cookie.js"></script>
@@ -297,5 +297,79 @@
 	<!-- build:js js/common.min.js -->
 	<script src="js/common.js"></script>
 		<!-- endbuild -->
+	<!--Validation script -->
+	<script type="text/javascript">
+		function validate(formid,idexport){
+        var output = false;
+        var name,email,phone;
+         form = $(formid); // указать ID формы !
+         form.find('input.name').focus();
+         form.find('input.phone').focus();
+         form.find('input.phone1').focus();
+         form.find('input.phone2').focus();
+         form.find('input.phone3').focus();
+         form.find('.subm1').focus();
+         name=form.find('.name').val();
+         email=form.find('.email').val();
+         phone=form.find('.phone1').val() + form.find('.phone2').val() + form.find('.phone3').val();
+         $(".last1").val(phone);
+         exp='crm/' + idexport;
+        // После того, как мы нажали кнопку "Отправить", делаем проверку,
+        // если кол-во полей с классов .not_error равно 5(так как у нас всего 5 полей), то есть все поля заполнены верно,
+        if($('.not_error').length == 5)
+        {  
+           // после успешной проверки отправляем форму и ставим куки
+             $.ajax({
+               type: "POST",
+               url: 'crm/export.php',
+               async: false,
+               data: {
+                 name: name,
+                 email: email,
+                 phone: phone,
+                 idexport: idexport
+               },
+               success: function () {
+                 setCookie('name', $('.name').val(), 365);
+                 setCookie('email', $('.email').val(), 365);
+                 setCookie('last1', $('.last1').val(), 365);
+                 setCookie('phone1', $('.phone1').val(), 365);
+                 setCookie('phone2', $('.phone2').val(), 365);
+                 setCookie('phone3', $('.phone3').val(), 365);
+                 output = true;
+               }
+             });
+       }
+       else
+       {
+         form.find('input.error').first().focus();
+       }
+     return output;
+  };
+</script>
+<!-- end validation script -->
+
+ <!--auto country code srcipt -->
+<script type="text/javascript">
+  $(window).load(function () {
+    jQuery("#user-city").text(ymaps.geolocation.city);
+    jQuery("#user-region").text(ymaps.geolocation.region);
+	  jQuery("#user-country").text(ymaps.geolocation.country);
+	  if(getCookie("phone1")){
+          $(".phone1").val(getCookie("phone1"));
+        }
+	  else if(ymaps.geolocation.country === 'Украина'){
+	  	$('.phone1').val('+38');
+	  }
+	  else if(ymaps.geolocation.country === "Россия") {
+            $('.phone1').val('+7');
+        }
+        else{
+        	$('.phone1').val('+37');
+        }
+  });
+</script>
+<script src="//api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+<!-- end auto country code script -->
 </body>
 </html>

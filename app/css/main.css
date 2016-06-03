@@ -16,13 +16,11 @@
   top: 0;
   opacity: 0.9;
   cursor: pointer;
-  transition:all 0.3s linear;
-}
+  transition: all 0.3s linear; }
 
 .close:hover {
   color: #fff;
-  background-color: #000;
-}
+  background-color: #000; }
 
 .button {
   background-color: #2b91af;
@@ -34,6 +32,41 @@
   padding: 10px 20px;
   text-align: center;
   text-decoration: none; }
+
+#soc {
+  margin-top: 0;
+  margin-left: 0;
+  margin: 0 auto;
+  width: 320px;
+  height: 40px;
+  border-radius: 3px;
+  /*border: 1px #dadada solid;*/
+  background-color: transparent;
+  /*background-color: #eeeeee;*/
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  /*float: left;*/ }
+
+#soc1 {
+  width: 205px;
+  height: 100%;
+  float: left;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  line-height: 42px;
+  padding-left: 0;
+  margin-left: -25px; }
+
+#soc2 {
+  width: 130px;
+  height: 100%;
+  float: left;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  line-height: 28px; }
 
 /*********************************************		MAIN STYLE
 \*********************************************/
@@ -49,15 +82,30 @@ body {
 .hidden {
   display: none; }
 
+.carousel img {
+  width: 100%;
+  height: auto; }
 
 .wrapper {
   margin: 0 auto; }
 
+p {
+  margin: 0;
+  padding: 0; }
+
+br.sm {
+  display: none; }
+
+br.xs {
+  display: none; }
+
 form input.error {
+  box-shadow: inset 0px 0px 20px 1px rgba(255, 0, 0, 0.3);
   border: 2px solid red !important; }
 
 form input.not_error {
-  border: 2px solid green !important; }
+  box-shadow: inset 0px 0px 20px 1px rgba(100, 255, 100, 0.3);
+  border: 2px solid #99FF99 !important; }
 
 /*********************************************		@IMPORT HEADER
 \*********************************************/
@@ -157,11 +205,23 @@ footer {
 \*********************************************/
 /* Medium Devices, Notebooks */
 /* Small Devices, Tablets */
+@media only screen and (max-width: 960px) {
+  .container {
+    width: 720px; }
+  br.sm {
+    display: block; }
+  br.xs {
+    display: none; } }
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 720px) {
-  .modal-body {
-    left: 0 !important;
-    margin: 30px auto; }
+  .container {
+    width: 340px;
+    overflow: hidden; }
+  br.sm {
+    display: none; }
+  br.xs {
+    display: block; }
   /*Disable Animation on Mobile Devices*/
   .animated {
     /*CSS transitions*/
@@ -175,6 +235,12 @@ footer {
     animation: none !important; } }
 
 /* Custom, iPhone Retina */
+@media only screen and (max-width: 340px) {
+  .container {
+    padding: 0;
+    overflow: hidden;
+    width: 320px; } }
+
 /*********************************************		Mobile First Method
 \*********************************************/
 /* Extra Small Devices, Phones */
