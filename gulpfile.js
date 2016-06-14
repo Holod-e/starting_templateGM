@@ -53,9 +53,6 @@ gulp.task('watch', function () {
 
 gulp.task('html', function () {
 	gulp.src('./app/index.html')														// get the files
-		.pipe(wiredep({
-			directory: "./app/bower/"														// dir where wiredep get files 
-		}))
 		.pipe(gulp.dest('./app/'))														// where to put the file
 		.pipe(browserSync.stream());													// browsersync stream
 });
