@@ -2,11 +2,10 @@
 Starting templateGM is a front-end HTML5 template for Genius Marketing developers.
 
 ##Gulp - Start Guide
-<p>Need to ensure you have everything on your machine (Node.js, npm, bower)</p>
+<p>Need to ensure you have everything on your machine (Node.js, npm)</p>
 <p>In root of template, use commands:</p>
 <ul>
 	<li>npm i</li>
-	<li>bower i</li>
 	<li>gulp (Run project)</li>
 	<li>gulp build (Build project)</li>
 	<li>gulp sprite (make spite from all png files in app/img/sprite)</li>
@@ -45,36 +44,6 @@ Starting templateGM is a front-end HTML5 template for Genius Marketing developer
 	</li>
 </ul>
 
-##About bPopup.js
-<p>With this library you can easy and very fast make modals window or popups</p>
-<p>Just make link (a with href="modalID" and class="modal-link". Example:</p>
-<pre>
-	<code>
-	a href="#modal1" class="modal-link" 
-	</code>
-</pre>
-<p>Make body of popup:</p>
-<pre>
-	<code>
- div class="modal-body" id="modal1"
-	</code>
-</pre>
-<p>You can change properties of modal window and animation in common.js</p>
-<pre>
-	<code>
-  $('a.modal-link').on('click', function(e) {
-    e.preventDefault();
-    var id = $(this).attr('href');
-    $(id).bPopup({
-      follow: [false, false], //x, y
-      position: ['50%', '10%'], //x, y
-      // speed: 450
-      // transition: 'slideIn',
-      // transitionClose: 'slideBack'
-    });
-  })
-	</code>
-</pre>
-<p>More details and properties: http://dinbror.dk/bpopup/</p>
+
 
 
