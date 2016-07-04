@@ -20,6 +20,7 @@
 	<!-- build:css css/libs.min.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/bootstrapGM.css">
+	<link rel="stylesheet" href="css/tingle.css">
 	<!-- endbuild -->
 
 	<!--Сюда подключаются главные стили-->
@@ -27,7 +28,7 @@
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/main.css">
 	<!-- endbuild -->
-	<script src="js/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<!-- VK-scripts -->
 	<script type="text/javascript" src="//vk.com/js/api/openapi.js?116"></script>
 	<script type="text/javascript">
@@ -67,23 +68,20 @@
 
 			</div>
 		<div class='footer-inline'>
-					<a href="#politika_conf" data-toggle="modal" data-target="#politika_conf"  >Политика <br class="sm"> конфиденциальности</a>
-					<a href="#otkaz" data-toggle="modal" data-target="#otkaz">Отказ от <br class="sm">  ответственности</a>
-					<a href="#soglasie" data-toggle="modal" data-target="#soglasie">Согласие <br class="sm">  с рассылкой</a>
-					<a href="#politika_vozvrata" data-toggle="modal" data-target="#politika_vozvrata">Политика  <br class="sm"> возврата</a>
+					<a href="#politika_conf" class="modal-btn">Политика <br class="sm"> конфиденциальности</a>
+					<a href="#otkaz" class="modal-btn"  data-toggle="modal">Отказ от <br class="sm">  ответственности</a>
+					<a href="#soglasie" data-toggle="modal" class="modal-btn" >Согласие <br class="sm">  с рассылкой</a>
+					<a href="#politika_vozvrata" class="modal-btn"  data-toggle="modal">Политика  <br class="sm"> возврата</a>
 		</div>
 	</div>
 </footer>
 </div>
 
-<<!---------- FOOTER END ---------->
+<!---------- FOOTER END ---------->
 
 <!---------- HiDDEN ELEMENTS (MODALS) ---------->
-<div class="modal fade" id="politika_conf" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
+<div class="tingle-modal" id="politika_conf" >
 				<div class="modal-header">
-					<button type='button' class="close" data-dismiss="modal">&times;</button>
 					<h4 class="modal-title">Политика конфиденциальности</h4>
 				</div>
 				<div class="modal-body">
@@ -114,17 +112,12 @@
           <p>В случае изменения данной политики конфиденциальности вы сможете прочитать об этих изменениях на этой странице или, в особых случаях, получить уведомление на свой e-mail.</p>
           <p>Для связи с администратором сайта по любым вопросам вы можете написать письмо на e-mail: geniusmarketing.ru@gmail.com</p>
          </div>
-      </div>
 		</div>
-	</div>
 
 	
 
-	<div class="modal fade" id="otkaz" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
+	<div class="tingle-modal fade" id="otkaz">
 				<div class="modal-header">
-					<button type='button' class="close" data-dismiss="modal">&times;</button>
 					<h4 class="modal-title">Отказ от ответсвенности</h4>
 				</div>
 				<div class="modal-body">
@@ -134,16 +127,11 @@
                      сайте, на который имеется гиперссылка с нашего cайта, возникновение зависимости, снижения продуктивности, увольнения или прерывания трудовой активности, а равно и отчисления из учебных учреждений, за любую упущенную выгоду, приостановку хозяйственной
                      деятельности, потерю программ или данных в Ваших информационных системах или иным образом, возникшие в связи с доступом, использованием или невозможностью использования Сайта, Содержимого или какого-либо связанного интернет-сайта, или неработоспособностью,
                      ошибкой, упущением, перебоем, дефектом, простоем в работе или задержкой в передаче, компьютерным вирусом или системным сбоем, даже если администрация будет явно поставлена в известность о возможности такого ущерба.</p> написать письмо на e-mail: geniusmarketing.ru@gmail.com</p>
-         </div>
       </div>
 		</div>
-	</div>
 
-	<div class="modal fade" id="soglasie" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
+	<div class="tingle-modal fade" id="soglasie" >
 				<div class="modal-header">
-					<button type='button' class="close" data-dismiss="modal">&times;</button>
 					<h4 class="modal-title">Согласие с рассылкой</h4>
 				</div>
 				<div class="modal-body">
@@ -168,14 +156,9 @@
                <p>Если Вы захотите отказаться от получения писем нашей регулярной рассылки, вы можете это сделать в любой момент с помощью специальной ссылки, которая размещается в конце каждого письма.</p>
      		 </div>
       </div>
-		</div>
-	</div>
 
-	<div class="modal fade" id="politika_vozvrata" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
+	<div class="tingle-modal fade" id="politika_vozvrata" role="dialog">
 				<div class="modal-header">
-					<button type='button' class="close" data-dismiss="modal">&times;</button>
 					<h4 class="modal-title">Политика возврата</h4>
 				</div>
 				<div class="modal-body">
@@ -191,15 +174,10 @@
           <p>Refunds shall be effected by transfer of the required amount of electronic purses (WebMoney, Yandex, QIWI), or the card VISA / MASTERCARD. Length transaction — from 1 to 3 business days.</p>
           <p>- Genius Marketing.</p>
 	   	 </div>
-      </div>
-		</div>
 	</div>
 
-	<div class="modal fade" id="aferta" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
+	<div class="tingle-modal fade" id="aferta">
 				<div class="modal-header">
-					<button type='button' class="close" data-dismiss="modal">&times;</button>
 					<h4 class="modal-title">ПУБЛИЧНЫЙ ДОГОВОР (ОФЕРТА) НА ОКАЗАНИЕ ИНФОРМАЦИОННЫХ УСЛУГ</h4>
 				</div>
 				<div class="modal-body">
@@ -280,12 +258,10 @@
        					<p>10.6. В случае, если любое из условий и/или положений настоящего Договора окажется/будет признано недействительным, то это не повлияет на действительность других его условий/положений, а также на Договор и его исполнение в целом, как если бы такое никогда не было частью настоящего Договора.</p>
 	   	 </div>
       </div>
-		</div>
-	</div>
 
 	<!-- build:js js/libs.min.js -->
 	<script src="js/wow.min.js"></script>
-	<script src="js/modal.min.js"></script>
+	<script src="js/tingle.js"></script>
 	<script src="js/AnchorScroller.js"></script>
 	<script src="js/cookie.js"></script>
 	<script src="js/jquery.cookie.js"></script>

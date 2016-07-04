@@ -47,3 +47,17 @@ $(document).ready(function() {
           $("input.phone2").val(getCookie("phone2"));
           $("input.phone3").val(getCookie("phone3"));
       });
+
+var modal = new tingle.modal({
+    footer: false,
+    stickyFooter: false,
+    cssClass: ['custom-class-1', 'custom-class-2']
+   
+});
+
+  $('a.modal-btn').on('click', function(event){
+   event.preventDefault();
+   var modalId = $(this).attr('href');
+   modal.setContent($(modalId).html());
+   modal.open();
+  });
