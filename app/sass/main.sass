@@ -1,0 +1,213 @@
+
+/*	----------@IMPORT VARIABLES---------- */
+
+@import _variables.sass
+
+/*	----------@IMPORT BUTTONS---------- */
+@import _buttons.sass
+
+/*	----------PRELOADER STYLES---------- */
+.preloaderGM
+	z-index: 999999999
+	position: fixed
+	display: block
+	width: 100%
+	height: 100vh
+	padding-top: 45vh
+	background: #fff
+	opacity: 1
+	animation: preloader_hide 1s 2s linear forwards, decrease 1s 3s linear forwards
+	-o-animation: preloader_hide 1s 2s linear forwards, decrease 1s 3s linear forwards
+	-moz-animation: preloader_hide 1s 2s linear forwards, decrease 1s 3s linear forwards
+	-ms-animation: preloader_hide 1s 2s linear forwards, decrease 1s 3s linear forwards
+	-webkit-animation: preloader_hide 1s 2s linear forwards, decrease 1s 3s linear forwards
+
+	.pre_circles
+		display:block
+		width: 50px
+		height: 50px
+		margin: 0 auto
+		.pre_circle1
+			position: absolute
+			width: 50px
+			height: 50px
+			border-radius: 50px
+			border: 2px solid #232323
+			will-change: contents
+			animation: circle_grow 1s 1s linear infinite
+			-o-animation: circle_grow 1s 1s linear infinite
+			-webkit-animation: circle_grow 1s 1s linear infinite
+			-moz-animation: circle_grow 1s 1s linear infinite
+			-ms-animation: circle_grow 1s 1s linear infinite
+			opacity: 0
+		.pre_circle2
+			position: absolute
+			margin-top: 20px
+			margin-left: 20px
+			width: 0px
+			height: 0px
+			border-radius: 50px
+			border: 2px solid #232323
+			will-change: contents
+			animation: circle_grow 1s 2s linear infinite
+			-o-animation: circle_grow 1s 2s linear infinite
+			-moz-animation: circle_grow 1s 2s linear infinite
+			-ms-animation: circle_grow 1s 2s linear infinite
+			-webkit-animation: circle_grow 1s 2s linear infinite
+			opacity: 0
+
+@keyframes decrease
+	0%
+		width: 100%
+	100%
+		width: 0%
+
+@-o-keyframes decrease
+	0%
+		width: 100%
+	100%
+		width: 0%
+
+@-webkit-keyframes decrease
+	0%
+		width: 100%
+	100%
+		width: 0%
+
+@keyframes circle_grow
+		0%
+				width: 0
+				height: 0
+				margin-left: 25px
+				margin-top: 25px
+				opacity: 1
+		100%
+				width: 50px
+				height: 50px
+				margin-left: 0px
+				margin-top: 0px
+				opacity: 0
+
+@keyframes preloader_hide
+		0%
+				opacity: 1
+		100%
+				opacity: 0
+
+@keyframes loader_vis
+		0%
+				opacity: 0
+		100%
+				opacity: 1
+
+@-webkit-keyframes circle_grow
+		0%
+				width: 0
+				height: 0
+				margin-left: 25px
+				margin-top: 25px
+				opacity: 1
+		100%
+				width: 50px
+				height: 50px
+				margin-left: 0px
+				margin-top: 0px
+				opacity: 0
+
+@-webkit-keyframes preloader_hide
+		0%
+				opacity: 1
+		100%
+				opacity: 0
+
+@-webkit-keyframes loader_vis
+		0%
+				opacity: 0
+		100%
+				opacity: 1
+
+@-o-keyframes circle_grow
+		0%
+				width: 0
+				height: 0
+				margin-left: 25px
+				margin-top: 25px
+				opacity: 1
+		100%
+				width: 50px
+				height: 50px
+				margin-left: 0
+				margin-top: 0
+				opacity: 0
+
+@-o-keyframes preloader_hide
+		0%
+				opacity: 1
+		100%
+				opacity: 0
+
+@-o-keyframes loader_vis
+		0%
+				opacity: 0
+		100%
+				opacity: 1
+
+
+
+
+/*	----------MAIN STYEL----------	*/
+body
+	font-family: "HelveticaNeueCyr-Roman", Helvetica, Arial, sans-serif
+	font-size: 14px
+	line-height: 1.42857143
+	min-width: 320px
+	color: #333333
+	position: relative
+	background-color: #ffffff
+
+/* Удалить или закоментировать при адаптивном дизайне!
+	.container
+		width: 960px !important
+ */
+
+.hidden
+	display: none
+
+.carousel img
+	width: 100%
+	height: auto
+
+.wrapper
+	margin: 0 auto
+
+p
+	margin: 0
+	padding: 0
+
+br.sm
+	display: none
+
+br.xs
+	display: none
+
+//validatorGM styles//
+form input.error
+	box-shadow: inset 0px 0px 20px 1px rgba(255, 0, 0, 0.3)
+	border: 2px solid red !important
+
+form input.not_error
+	box-shadow: inset 0px 0px 20px 1px rgba(100, 255, 100, 0.3)
+	border: 2px solid #99FF99 !important
+
+/*	----------@IMPORT HEADER----------	*/
+@import _header.sass
+
+/*	----------TYPOGRAPHY----------	*/
+
+/*	----------SECTIONS----------	*/
+
+/*	----------@IMPORT FOOTER----------	*/
+@import _footer.sass
+
+/*	----------@IMPORT MEDIA---------- */
+@import _media.sass

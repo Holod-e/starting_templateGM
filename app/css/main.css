@@ -1,11 +1,8 @@
-/*********************************************		@IMPORT VARIABLES
-\*********************************************/
-/*********************************************		COLORS
-\*********************************************/
-/*********************************************		FONTS
-\*********************************************/
-/*********************************************		@IMPORT BUTTONS
-\*********************************************/
+@charset "UTF-8";
+/*	----------@IMPORT VARIABLES---------- */
+/* ----------COLORS---------- */
+/* ----------FOTNS---------- */
+/*	----------@IMPORT BUTTONS---------- */
 .close {
   border-radius: 5px 5px 5px 5px;
   box-shadow: none;
@@ -40,13 +37,10 @@
   width: 320px;
   height: 40px;
   border-radius: 3px;
-  /*border: 1px #dadada solid;*/
   background-color: transparent;
-  /*background-color: #eeeeee;*/
   box-sizing: border-box;
   -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  /*float: left;*/ }
+  -webkit-box-sizing: border-box; }
 
 #soc1 {
   width: 205px;
@@ -68,8 +62,119 @@
   -webkit-box-sizing: border-box;
   line-height: 28px; }
 
-/*********************************************		MAIN STYLE
-\*********************************************/
+/*	----------PRELOADER STYLES---------- */
+.preloaderGM {
+  z-index: 999999999;
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  padding-top: 45vh;
+  background: #fff;
+  opacity: 1;
+  animation: preloader_hide 1s 2s linear forwards, decrease 1s 3s linear forwards;
+  -o-animation: preloader_hide 1s 2s linear forwards, decrease 1s 3s linear forwards;
+  -moz-animation: preloader_hide 1s 2s linear forwards, decrease 1s 3s linear forwards;
+  -ms-animation: preloader_hide 1s 2s linear forwards, decrease 1s 3s linear forwards;
+  -webkit-animation: preloader_hide 1s 2s linear forwards, decrease 1s 3s linear forwards; }
+  .preloaderGM .pre_circles {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto; }
+    .preloaderGM .pre_circles .pre_circle1 {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+      border: 2px solid #232323;
+      will-change: contents;
+      animation: circle_grow 1s 1s linear infinite;
+      -o-animation: circle_grow 1s 1s linear infinite;
+      -webkit-animation: circle_grow 1s 1s linear infinite;
+      -moz-animation: circle_grow 1s 1s linear infinite;
+      -ms-animation: circle_grow 1s 1s linear infinite;
+      opacity: 0; }
+    .preloaderGM .pre_circles .pre_circle2 {
+      position: absolute;
+      margin-top: 20px;
+      margin-left: 20px;
+      width: 0px;
+      height: 0px;
+      border-radius: 50px;
+      border: 2px solid #232323;
+      will-change: contents;
+      animation: circle_grow 1s 2s linear infinite;
+      -o-animation: circle_grow 1s 2s linear infinite;
+      -moz-animation: circle_grow 1s 2s linear infinite;
+      -ms-animation: circle_grow 1s 2s linear infinite;
+      -webkit-animation: circle_grow 1s 2s linear infinite;
+      opacity: 0; }
+
+@keyframes decrease {
+  0% {
+    width: 100%; }
+  100% {
+    width: 0%; } }
+
+@-webkit-keyframes decrease {
+  0% {
+    width: 100%; }
+  100% {
+    width: 0%; } }
+
+@keyframes circle_grow {
+  0% {
+    width: 0;
+    height: 0;
+    margin-left: 25px;
+    margin-top: 25px;
+    opacity: 1; }
+  100% {
+    width: 50px;
+    height: 50px;
+    margin-left: 0px;
+    margin-top: 0px;
+    opacity: 0; } }
+
+@keyframes preloader_hide {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes loader_vis {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes circle_grow {
+  0% {
+    width: 0;
+    height: 0;
+    margin-left: 25px;
+    margin-top: 25px;
+    opacity: 1; }
+  100% {
+    width: 50px;
+    height: 50px;
+    margin-left: 0px;
+    margin-top: 0px;
+    opacity: 0; } }
+
+@-webkit-keyframes preloader_hide {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@-webkit-keyframes loader_vis {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/*	----------MAIN STYEL----------	*/
 body {
   font-family: "HelveticaNeueCyr-Roman", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -79,6 +184,10 @@ body {
   position: relative;
   background-color: #ffffff; }
 
+/* Удалить или закоментировать при адаптивном дизайне!
+	.container
+		width: 960px !important
+ */
 .hidden {
   display: none; }
 
@@ -107,15 +216,13 @@ form input.not_error {
   box-shadow: inset 0px 0px 20px 1px rgba(100, 255, 100, 0.3);
   border: 2px solid #99FF99 !important; }
 
-/*********************************************		@IMPORT HEADER
-\*********************************************/
-/*********************************************		TYPOGRAPHY
-\*********************************************/
-/*********************************************		SECTIONS
-\*********************************************/
-/*********************************************		@IMPORT FOOTER
-\*********************************************/
+/*	----------@IMPORT HEADER----------	*/
+/*	----------TYPOGRAPHY----------	*/
+/*	----------SECTIONS----------	*/
+/*	----------@IMPORT FOOTER----------	*/
 footer {
+  vertical-align: top;
+  padding-bottom: 35px;
   width: 100%;
   min-height: 250px;
   background-color: #fff;
@@ -125,17 +232,20 @@ footer {
   footer br.xs {
     display: none; }
   footer p {
-    font-family: 'HelveticaNeueCyr-Roman';
+    font-family: OpenSansRegular;
     color: #979898;
-    font-size: 16px; }
+    font-size: 13px;
+    text-align: left; }
   footer .social {
     margin-bottom: 35px; }
   footer a {
-    font-family: 'HelveticaNeueCyr-Roman';
+    font-family: Arial;
     padding: 0 10px;
+    padding-left: 0;
     color: #979898;
-    font-size: 16px;
-    transition: all 0.3s linear; }
+    font-size: 13px;
+    transition: all 0.3s linear;
+    text-align: left; }
   footer a:hover {
     text-decoration: none; }
   footer a.partners {
@@ -157,52 +267,73 @@ footer {
     margin-bottom: 0; }
   footer a.icon-soc {
     display: inline-block;
-    width: 19px;
-    height: 19px;
+    width: 35px;
+    height: 35px;
     vertical-align: top;
-    margin: 0px 5px;
-    background-image: url(../img/soc-footer.png); }
+    margin: 0px 20px; }
   footer a.icon-soc:hover {
     opacity: 0.8; }
   footer .icon-fb {
-    background-position: 0px 0px; }
+    background: url(../img/fb.png) 0 0 no-repeat; }
   footer .icon-inst {
-    background-position: 0px -19px; }
+    background: url(../img/in.png) 0 0 no-repeat; }
   footer .icon-vk {
-    background-position: 0px -38px; }
+    background: url(../img/vk.png) 0 0 no-repeat; }
   footer .icon-yt {
-    background-position: 0px -57px; }
-
-@media only screen and (max-width: 960px) {
-  footer br.sm {
-    display: block; }
-  footer br.xs {
-    display: none; }
-  footer p {
-    font-size: 15px; }
-  footer .footer-inline {
-    text-align: center; }
-  footer .footer-inline a {
-    font-size: 15px;
+    background: url(../img/yt.png) 0 0 no-repeat; }
+  footer .modal-btn {
+    padding-left: 20px;
+    margin-top: 0;
+    margin-bottom: 8px; }
+  footer .footer1,
+  footer .footer2,
+  footer .footer3 {
     display: inline-block;
-    text-align: left; } }
+    vertical-align: top; }
+  footer .footer2 {
+    padding-top: 60px;
+    margin-left: 30px; }
+    footer .footer2 .modal-btn {
+      padding-left: 20px;
+      display: block;
+      margin-top: 0;
+      margin-bottom: 8px;
+      background: url("../img/bird.png") 0 6px no-repeat; }
+  footer .footer3 {
+    padding-top: 60px;
+    margin-left: 30px; }
+    footer .footer3 p.text4 {
+      font-family: GothamProRegular;
+      line-height: 25px; }
+      footer .footer3 p.text4 span {
+        color: #636475;
+        font-size: 16px;
+        font-family: GothamProBold;
+        padding-right: 70px; }
+      footer .footer3 p.text4 span.ru {
+        padding-right: 76px; }
+  footer .footer-line {
+    display: inline-block;
+    margin-top: 50px;
+    margin-bottom: 35px;
+    width: 100%;
+    height: 1px;
+    background-color: #6c6c6c;
+    opacity: 0.3; }
+  footer .bottom-text {
+    font-family: Arial;
+    font-size: 13px;
+    line-height: 22px;
+    color: #6e6f81;
+    text-align: center; }
+  footer .mail {
+    background-color: #f8ff44;
+    color: #636475;
+    font-family: Arial;
+    font-weight: 700; }
 
-@media only screen and (max-width: 720px) {
-  footer p {
-    font-size: 14px; }
-  footer br.sm {
-    display: none; }
-  footer br.xs {
-    display: block; }
-  footer .footer-inline a {
-    font-size: 14px;
-    display: block;
-    text-align: center; } }
-
-/*********************************************		@IMPORT MEDIA
-\*********************************************/
-/*********************************************		Desktop First Method
-\*********************************************/
+/*	----------@IMPORT MEDIA---------- */
+/*	----------Desktop first Method----------	*/
 /* Medium Devices, Notebooks */
 /* Small Devices, Tablets */
 @media only screen and (max-width: 960px) {
@@ -211,7 +342,24 @@ footer {
   br.sm {
     display: block; }
   br.xs {
-    display: none; } }
+    display: none; }
+  .copy {
+    margin-top: 40px; }
+  .footer3 {
+    display: block;
+    padding-top: 0;
+    margin: 0; }
+    .footer3 .social {
+      margin-left: 10px;
+      float: left; }
+    .footer3 .text4 {
+      margin-right: 40px;
+      float: right; }
+      .footer3 .text4 span {
+        padding-right: 20px; }
+    .footer3 .footer-line {
+      margin-top: 25px;
+      margin-bottom: 25px; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 720px) {
@@ -232,17 +380,35 @@ footer {
     transform: none !important;
     /*CSS animations*/
     -webkit-animation: none !important;
-    animation: none !important; } }
+    animation: none !important; }
+  footer .footer2 {
+    padding-top: 0;
+    padding-left: 0;
+    float: left;
+    margin-bottom: 20px; }
+  footer .footer3 {
+    margin-left: 0;
+    padding-top: 0; }
+    footer .footer3 .social {
+      margin-left: 0;
+      text-align: center; }
+    footer .footer3 p.text4 span.ru {
+      padding-right: 50px; }
+    footer .footer3 p.text4 span.ua {
+      padding-right: 35px; }
+  footer a.icon-soc {
+    margin: 0 10px; }
+  footer .bottom-text br {
+    display: none; } }
 
-/* Custom, iPhone Retina */
+/* Custom, iPhone Retina*/
 @media only screen and (max-width: 340px) {
   .container {
     padding: 0;
     overflow: hidden;
     width: 320px; } }
 
-/*********************************************		Mobile First Method
-\*********************************************/
+/*	----------Mobile First Method----------	*/
 /* Extra Small Devices, Phones */
 /* Small Devices, Tablets */
 /* Medium Devices, Desktops */

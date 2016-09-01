@@ -1,7 +1,3 @@
-/*********************************************		@IMPORT
-\*********************************************/
-/*********************************************		FONTS
-\*********************************************/
 @font-face {
   font-family: "Roboto-Medium";
   font-style: normal;
@@ -13,3 +9,21 @@
   font-style: normal;
   font-weight: normal;
   src: url("../fonts/HelveticaNeueCyr-Roman/HelveticaNeueCyr-Roman.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueCyr-Roman/HelveticaNeueCyr-Roman.woff") format("woff"), url("../fonts/HelveticaNeueCyr-Roman/HelveticaNeueCyr-Roman.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "OpenSansRegular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/OpenSansRegular/OpenSansRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSansRegular/OpenSansRegular.woff") format("woff"), url("../fonts/OpenSansRegular/OpenSansRegular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "GothamProRegular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/GothamProRegular/GothamProRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamProRegular/GothamProRegular.woff") format("woff"), url("../fonts/GothamProRegular/GothamProRegular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "GothamProBold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/GothamProBold/GothamProBold.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamProBold/GothamProBold.woff") format("woff"), url("../fonts/GothamProBold/GothamProBold.ttf") format("truetype"); }

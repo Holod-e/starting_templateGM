@@ -1,0 +1,116 @@
+/*	----------Desktop first Method----------	*/
+
+/* Medium Devices, Notebooks */
+
+// @media only screen and (max-width: 1170px)
+//	 .continer
+//		 width: 960px
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 960px)
+	.container
+		width: 720px
+
+	br.sm
+		display: block
+
+	br.xs
+		display: none
+
+	footer
+	.copy
+		margin-top: 40px
+	.footer3
+		display: block
+		padding-top: 0
+		margin: 0
+		.social
+			margin-left: 10px
+			float: left
+		.text4
+			margin-right: 40px
+			float: right
+			span
+				padding-right: 20px
+		.footer-line
+			margin-top: 25px
+			margin-bottom: 25px
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 720px)
+	.container
+		width: 340px
+		overflow: hidden
+
+	br.sm
+		display: none
+
+	br.xs
+		display: block
+
+	/*Disable Animation on Mobile Devices*/
+	.animated
+		/*CSS transitions*/
+		-o-transition-property: none !important
+		-moz-transition-property: none !important
+		-ms-transition-property: none !important
+		-webkit-transition-property: none !important
+		transition-property: none !important
+
+		/*CSS transforms*/
+		-o-transform: none !important
+		-moz-transform: none !important
+		-ms-transform: none !important
+		-webkit-transform: none !important
+		transform: none !important
+
+		/*CSS animations*/
+		-webkit-animation: none !important
+		-moz-animation: none !important
+		-o-animation: none !important
+		-ms-animation: none !important
+		animation: none !important
+
+	footer
+		.footer2
+			padding-top: 0
+			padding-left: 0
+			float: left
+			margin-bottom: 20px
+		.footer3
+			margin-left: 0
+			padding-top: 0
+			.social
+				margin-left: 0
+				text-align: center
+			p.text4 span.ru
+				padding-right: 50px
+			p.text4 span.ua
+				padding-right: 35px
+		a.icon-soc
+			margin: 0 10px
+		.bottom-text br
+			display: none
+
+
+/* Custom, iPhone Retina*/
+@media only screen and (max-width: 340px)
+	.container
+		padding: 0
+		overflow: hidden
+		width: 320px
+
+/*	----------Mobile First Method----------	*/
+
+/* Extra Small Devices, Phones */
+// @media only screen and (min-width: 320px)
+
+/* Small Devices, Tablets */
+// @media only screen and (min-width: 720px)
+
+/* Medium Devices, Desktops */
+// @media only screen and (min-width: 960px)
+
+/* Large Devices, Wide Screens */
+// @media only screen and (min-width: 1130px)

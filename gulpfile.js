@@ -43,7 +43,7 @@ gulp.task('connect', ['watch'], function() {							// files to inject
 
 gulp.task('watch', function () {
 	gulp.watch(['./app/*.html'], ['html']),									// watching changes in HTML
-	gulp.watch(['./app/sass/*.scss'], ['scss']),						// watching changes in SASS
+	gulp.watch(['./app/sass/*.sass'], ['sass']),						// watching changes in SASS
 	gulp.watch(['./app/js/*.js'], ['js']);									// watching changes in JS
 });
 
@@ -61,8 +61,8 @@ gulp.task('html', function () {
 		5.	SASS TASKS
 \*******************************************************************************/
 
-gulp.task('scss', function () {
-	gulp.src('./app/sass/*.scss')														// get the files
+gulp.task('sass', function () {
+	gulp.src('./app/sass/*.sass')														// get the files
 		.pipe(plumber({errorHandler: notify.onError({
 			 title:    'Ошибка :(',
 			 message:  '<%= error.message %>'
