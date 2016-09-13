@@ -67,7 +67,7 @@
 
               // Проверка поля "Телефона3 номер телефона"
                case 'phone3':
-                  if(val != '' && val.length >= 7)
+                  if(val != '' && val.length >= 6)
                   {
                      $(this).removeClass('error');
                      $(this).addClass('not_error');
